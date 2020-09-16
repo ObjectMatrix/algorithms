@@ -39,8 +39,8 @@ class BinaryHeap {
   }
 
   insert(value) {
-    this.heap.push(value);
-    this.bubbleUp();
+    this.heap.push(value)
+    this.bubbleUp()
   }
 
   //using iterative approach
@@ -75,19 +75,19 @@ class BinaryHeap {
     // Max heap
     if(this.minmax === 'max') {
       if (left <= length && this.heap[left] > this.heap[minmax]) {
-        minmax = left;
+        minmax = left
       }
       if (right <= length && this.heap[right] > this.heap[minmax]) {
-        minmax = right;
+        minmax = right
       }
     }
     // Min heap
     if(this.minmax === 'min') {
       if (left <= length && this.heap[left] < this.heap[minmax]) {
-        minmax = left;
+        minmax = left
       }
       if (right <= length && this.heap[right] < this.heap[minmax]) {
-        minmax = right;
+        minmax = right
       }
     }
     // swap
@@ -95,7 +95,7 @@ class BinaryHeap {
       [this.heap[minmax], this.heap[index]] = [
         this.heap[index],
         this.heap[minmax],
-      ];
+      ]
       this.sinkDown(minmax)
     }
   }
@@ -110,5 +110,5 @@ heap.insert(80)
 heap.insert(70)
 heap.insert(50)
 
-console.log(heap.minmax);
-console.log(heap.extract());
+console.log(heap.minmax)
+console.log(heap.extract())
